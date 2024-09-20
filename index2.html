@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Message</title>
+</head>
+<body>
+    <script>
+    // TODO: Add hello code
+    function Message1() {
+        const a = 'a'
+        const message = `안녕하세요, 제 이름은 ${a}입니다.`;
+        document.write(message);  
+    }
+
+    function Message2() {
+        const study = 'aaaa'
+        const message = `저는 ${study}를 공부하고 있습니다.`;
+        document.write(message);
+    }
+
+    function Message3() {
+        const how = 'aaaaaaaa'
+        const message = `지금 ${how}를 사용했습니다.`;
+        document.write(message);
+    }
+
+    const intro = [
+        Message1,
+        Message2,
+        Message3
+    ]
+
+    let index = 0;
+
+    const timer = ()=> {
+        intro[index]()
+        index = (index + 1) % intro.length;
+        
+    }
+
+    setInterval(timer, 3000);
+    
+
+    
+    
+    
+
+    // TODO: Add setTimeout code
+    
+
+    </script>
+</body>
+</html>
