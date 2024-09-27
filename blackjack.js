@@ -19,9 +19,9 @@ while (bankSum > 17) {
 
 if (bankSum > 21 || (sum <= 21 && sum > bankSum)) {
  console.log('You win');
-} if (sum > 21 || (bankSum <= 21 && sum < bankSum)){
+} else if (sum > 21 || (bankSum <= 21 && sum < bankSum)){
  console.log('Bank wins');
-} if (bankSum == sum ){
+} else if (bankSum == sum ){
     console.log('Draw');
 }
 console.log(`You have ${sum} points`);
