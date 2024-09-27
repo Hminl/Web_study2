@@ -1,14 +1,14 @@
 // blackjack.js
-let card = [11, 9, 1];
-let cardBank = [9, 7, 1, 4];
+let card = [10, 9, 2];
+let cardBank = [5, 7, 1, 4];
 
 let sum = card[0] + card[1];
 let bankSum = cardBank[0] + cardBank[1];
 
-if (sum == 21) {
-    console.log('You BlackJack');
-} else {
+if (sum <= 21) {
     sum += card[2];
+} if (sum === 21){
+    console.log('You BlackJack');
 }
 
 let i = 2;
