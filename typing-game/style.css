@@ -1,0 +1,32 @@
+.highlight {
+    background-color: rgb(168, 235, 255);
+   }
+   
+.error {
+background-color: lightcoral;
+border: red;
+}
+
+h1 {
+    font-family : Staatliches, cursive;
+    font-size: 6em;
+    color: #F1C164;
+  text-shadow: 5px 5px #16345A, 8px 8px #284D8E, 11px 11px #4D8CBF, 14px 14px #5FA9D9;
+  margin: 0;
+  text-align: center;
+}
+
+p{
+    font-family: Montserrat, sans-serif;
+    font-style: italic; 
+    letter-spacing: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.con{
+    display: flex;
+    justify-content: center;
+}
+
+   
