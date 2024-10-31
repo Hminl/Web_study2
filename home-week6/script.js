@@ -16,7 +16,6 @@ dragElement(document.getElementById('plant14'));
 
 
 function dragElement(terrariumElement) {
-
     let pos1 = 0,
     pos2 = 0,
     pos3 = 0,
