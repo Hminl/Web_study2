@@ -16,39 +16,34 @@ dragElement(document.getElementById('plant14'));
 
 
 function dragElement(terrariumElement) {
+
     let pos1 = 0,
     pos2 = 0,
     pos3 = 0,
     pos4 = 0;
-    terrariumElement.onpointerdown = pointerDrag;
-    
     terrariumElement.ondblclick = elementdblClick;
 
-    function pointerDrag(e) {
-        e.preventDefault();
-        console.log(e);
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onpointermove = elementDrag;
-        document.onpointerup = stopElementDrag;
-       }
-       
-       function elementDrag(e) {
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
+    terrariumElement.ondragstart = (ev) => {
+        // ev.preventDefault();
+        pos3 = ev.clientX;
+        pos4 = ev.clientY;
+        console.log(ev);
+        console.log("dragstart");
+    }
+
+    terrariumElement.ondragend = (ev) => {
+        pos1 = pos3 - ev.clientX;
+        pos2 = pos4 - ev.clientY;
+        pos3 = ev.clientX;
+        pos4 = ev.clientY;
         console.log(pos1, pos2, pos3, pos4);
         terrariumElement.style.top = terrariumElement.offsetTop - pos2 + 'px';
         terrariumElement.style.left = terrariumElement.offsetLeft - pos1 + 'px';
-       }
+        console.log(ev);
+        console.log("end");
+    }
 
-       function stopElementDrag() {
-        document.onpointerup = null;
-        document.onpointermove = null;
-       }
-
-       function elementdblClick(e) {
+    function elementdblClick(e) {
         e.preventDefault();
         let TopPlant = document.getElementsByClassName("plant");
         let sample = 2;
@@ -60,7 +55,7 @@ function dragElement(terrariumElement) {
 
         terrariumElement.style.zIndex = sample + 1;
        }
-              
+
 }
    
 
