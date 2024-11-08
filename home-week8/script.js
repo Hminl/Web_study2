@@ -79,6 +79,9 @@ document.getElementById('start').addEventListener('click',() => {
 
         typedValueElement.disabled = true;
         document.getElementById('start').disabled = false;
+        document.getElementById('start').classList.remove('startnone');
+        document.getElementById('start').classList.add('startact');
+
         document.getElementById('modal_back').style.display = "flex"
     } else if (typedValue.endsWith(' ') && typedValue.trim() === currentWord) { //
         typedValueElement.value = '';
