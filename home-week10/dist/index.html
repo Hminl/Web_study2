@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>@import url(https://fonts.googleapis.com/css?family=Pacifico);
+      @import url('https://fonts.googleapis.com/css2?family=Delius&family=DynaPuff:wght@400..700&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap');
+   </style>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+ <title>Pomodoro Timer</title>
+ <link rel = "stylesheet" href="style.css"/>
+</head>
+
+<body class="container">   
+ <div>
+ <h1>Pomodoro Timer</h1>
+ </div>
+ <div>
+   <h2>Set your WORK & BREAK time</h2> 
+ </div>
+ <hr role="header-Line">
+
+ <!--시간설정-->
+ <form class="time-data" id = 'time-data'>
+ <div>
+    <label for="work">WORK</label>
+    <input type="number" id="w" max="50" placeholder="MAX 50min">
+ </div>
+ <div>
+    <label for="relax">BREAK</label>
+    <input type="number" id="r" max="10" placeholder="MAX 10min">
+ </div>
+ <button type="button" class="TimeBtn">START</button>
+</form>
+
+<!--타이머-->
+<div class="pomodoro" id = "pomodoro" style="display: none">
+    <div class="timer">
+      <span class="time-text">Set Time</span>
+    </div>
+    <div class="BTN">
+    <button type="button" class="StopBtn">STOP</button>
+    <button type="button" class="ResetBtn">RESET</button>
+   </div>
+</div>
+ 
+
+
+
+<script src="main.js"></script>
+</body>
+</html>

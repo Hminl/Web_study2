@@ -1,0 +1,180 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,button{margin:0;padding:0}
+fieldset,img{border:0 none}
+dl,ul,ol,menu,li{list-style:none}
+blockquote, q{quotes:none}
+blockquote:before, blockquote:after,q:before, q:after{content:'';content:none}
+input,select,textarea,button{vertical-align:middle;font-size:100%}
+button{border:0 none;background-color:transparent;cursor:pointer}
+table{border-collapse:collapse;border-spacing:0}
+body{-webkit-text-size-adjust:none} /* 뷰포트 변환시 폰트크기 자동확대 방지. */
+input[type='text'],input[type='password'],input[type='submit'],input[type='search'],input[type='tel'],input[type='email'],html
+input[type='button'],input[type='reset']{-webkit-appearance:none;border-radius:0}
+input[type='search']::-webkit-search-cancel-button{-webkit-appearance:none}
+body{background:#fff}
+body,th,td,input,select,textarea,button{font-size:14px;line-height:1.5;font-family:'MalgunGothic','맑은 고딕',sans-serif;color:#333} /* color값은 디자인가이드에 맞게사용 */
+a{color:#333;text-decoration:none}
+a:active, a:hover{text-decoration:none}
+address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal}
+
+body{
+    width: 350px;
+    text-align: center;
+    margin : 0 auto;
+    background-color: #F4F4E9;
+}
+
+h1 {
+    font-weight: normal;
+    font-style: oblique;
+    font-size: 55px;
+    line-height:1em;
+    letter-spacing: -0.05em;
+    margin-top:25px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-family: "Pacifico", sans-serif;
+   
+}
+
+h2{
+    font-weight: normal;
+    font-size: 25px;
+    line-height:1em;
+    letter-spacing: -0.05em;
+    margin-top:35px;
+    font-family: "Delius", sans-serif;
+}
+
+hr[role="header-Line"] {
+    border: 0px solid;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(172, 131, 83, 0.75), rgba(0, 0, 0, 0));
+    margin: 32px 0px;
+    display: block;
+}
+hr[role="header-Line"]::before {
+    position: absolute;
+    background-color: #F4F4E9;
+    border: 10px solid #AC8353;
+    border-top: 10px solid transparent;
+    border-radius: 2px;
+    padding: 0px;
+    transform: rotate(180deg);
+    left: 50%;
+    margin: -5px 0px 0px -21px;
+    content: "";
+}
+
+#w, #r{
+    width: 200px;
+        height: 40px;
+        border: 0;
+        border-radius: 10px;
+        outline: none;
+        background-color: rgb(233, 233, 233);
+        margin:5px;
+        text-align: center;
+        font-family: "Delius", sans-serif;
+}
+
+label{
+    font-weight: bold;
+    font-size: 15px;
+    line-height:1em;
+    font-family: "Delius", sans-serif;
+}
+
+.TimeBtn{
+    width: 300px;
+    height: 40px;
+  padding: 0;
+  margin: 10px 20px 10px 0;
+    box-shadow: 0px 5px 0px 0px #4E7779;
+    text-align: center;
+    border-radius: 5px;
+  transition: all 0.2s;
+  background: #90C7CA;
+  font-family: "Delius", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.TimeBtn:hover{
+        margin-top: 15px;
+        margin-bottom: 5px;
+        box-shadow: 0px 0px 0px 0px #4E7779;
+}
+
+.StopBtn{
+    width: 70px;
+    height: 60px;
+  padding: 0;
+  margin: 10px 20px 10px 0;
+    box-shadow: 0px 5px 0px 0px #4E7779;
+    border-radius: 50%;
+  transition: all 0.2s;
+  background: #90C7CA; 
+  text-align: center;
+  font-family: "Delius", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+
+}
+
+.StopBtn:hover{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    box-shadow: 0px 0px 0px 0px #4E7779;
+}
+
+.ResetBtn{
+    width: 70px;
+    height: 60px;
+  padding: 0;
+  margin: 10px 20px 10px 0;
+    box-shadow: 0px 5px 0px 0px #4E7779;
+    text-align: center;
+    border-radius: 50%;
+  transition: all 0.2s;
+  background: #90C7CA; 
+  font-family: "Delius", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.ResetBtn:hover{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    box-shadow: 0px 0px 0px 0px #a5a802;
+}
+
+
+.timer {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(#11e84a 0deg, #ccc 0deg); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+  .timer:after {
+    content: "";
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+
+
+.time-text {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    z-index: 1; 
+    font-family: "Delius", sans-serif;
+  }
